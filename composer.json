@@ -1,0 +1,12 @@
+{
+    "name": "atpro/php-mvc-core",
+    "description": "my first php-mvc mini framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "as199",
+            "email": "dioneassane0290@gmail.com"
+        }
+    ],
+    "require": {}
+}
