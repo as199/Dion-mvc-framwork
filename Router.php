@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App\core;
+namespace atpro\phpmvc;
 
-use App\core\exceptions\ForbiddenException;
-use App\core\exceptions\NotFoundException;
+use atpro\phpmvc\exceptions\ForbiddenException;
+use atpro\phpmvc\exceptions\NotFoundException;
 
 /**
  * @Author Assane Dione
  * Class Router
- * @package App\core
+ * @package atpro\phpmvc
  */
 class Router
 {
@@ -52,7 +52,7 @@ class Router
           return Application::$app->view->renderView($callback);
       }
       if(is_array($callback)){
-          /** @var \App\core\Controller $controller */
+          /** @var \atpro\phpmvc\Controller $controller */
           $controller = new $callback[0]();
           Application::$app->controller = $controller;
           $controller->action = $callback[1];

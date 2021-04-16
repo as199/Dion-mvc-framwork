@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\core;
+namespace atpro\phpmvc;
 
 /**
  * @Author Assane Dione
  * Class Model
- * @package App\core
+ * @package atpro\phpmvc
  */
 abstract class Model
 {

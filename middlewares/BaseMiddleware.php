@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\core\middlewares;
+namespace atpro\phpmvc\middlewares;
 
 
 abstract class BaseMiddleware

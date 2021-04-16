@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App\core;
+namespace atpro\phpmvc;
 
-use App\core\middlewares\BaseMiddleware;
+use atpro\phpmvc\middlewares\BaseMiddleware;
 
 /**
  * @Author Assane Dione
  * Controller General
  * Class Controller
- * @package App\core
+ * @package atpro\phpmvc
  */
 class Controller
 {

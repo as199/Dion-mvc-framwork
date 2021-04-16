@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\core;
+namespace atpro\phpmvc;
 
 /**
  * @Author Assane Dione
  * Class Response
- * @package App\core
+ * @package atpro\phpmvc
  */
 class Response
 {

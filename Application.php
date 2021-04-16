@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App\core;
+namespace atpro\phpmvc;
 
 
-use App\core\db\Database;
-use App\core\db\DbModel;
+use atpro\phpmvc\db\Database;
+use atpro\phpmvc\db\DbModel;
 
 /**
  * Class Application
- * @package App\core
+ * @package atpro\phpmvc
  */
 class Application
 {

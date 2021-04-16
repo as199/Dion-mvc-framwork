@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\core;
+namespace atpro\phpmvc;
 
 
-use App\core\db\DbModel;
+use atpro\phpmvc\db\DbModel;
 
 abstract class UserModel extends DbModel
 {

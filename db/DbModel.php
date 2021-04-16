@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\core\db;
+namespace atpro\phpmvc\db;
 
 
- use App\core\Application;
- use App\core\Model;
+ use atpro\phpmvc\Application;
+ use atpro\phpmvc\Model;
 
  abstract class DbModel extends Model
 {
