@@ -6,11 +6,18 @@ namespace atpro\phpmvc\db;
 
 use atpro\phpmvc\Application;
 
+/**
+ * @Author Assane Dione
+ * Class Database
+ * @package atpro\phpmvc\db
+ */
 class Database
 {
     public \PDO $pdo;
+
     /**
      * Database constructor.
+     * @param array $config * les configuration d'accés à la base de donnés mysql
      */
     public function __construct(array $config)
     {

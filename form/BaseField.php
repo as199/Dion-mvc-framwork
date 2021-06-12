@@ -6,6 +6,11 @@ namespace atpro\phpmvc\form;
 
 use atpro\phpmvc\Model;
 
+/**
+ * @Author Assane Dione
+ * Class BaseField
+ * @package atpro\phpmvc\form
+ */
 abstract class BaseField
 {
     public Model $model;
@@ -24,6 +29,9 @@ abstract class BaseField
         $this->attribute = $attribute;
     }
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return sprintf('

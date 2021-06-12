@@ -6,6 +6,11 @@ namespace atpro\phpmvc\form;
 
 use atpro\phpmvc\Model;
 
+/**
+ * @Author Assane Dione
+ * Class InputField
+ * @package atpro\phpmvc\form
+ */
 class InputField extends BaseField
 {
     public const TYPE_TEXT = 'text';
@@ -35,12 +40,20 @@ class InputField extends BaseField
         $this->type = self::TYPE_PASSWORD;
         return $this;
     }
+
+    /**
+     * @return $this
+     */
     public function numberField()
     {
         $this->type = self::TYPE_NUMBER;
         return $this;
     }
 
+    /**
+     * Permet de rendre une input et sa validation
+     * @return string
+     */
     public function renderInput(): string
     {
         return sprintf('<input type="%s" name="%s" value="%s" class="form-control%s" >',

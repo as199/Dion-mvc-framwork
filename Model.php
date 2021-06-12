@@ -21,9 +21,9 @@ abstract class Model
 
     /**
      * Permet de verifier si une propriété appartient à la classe
-     * @param $data
+     * @param array $data
      */
-    public function loadData($data): void
+    public function loadData(array $data): void
     {
         foreach ($data as $key => $value){
             if(property_exists($this, $key)){
@@ -34,11 +34,18 @@ abstract class Model
 
     abstract public function rules(): array;
 
+    /**
+     * @return array
+     */
     public function labels(): array
     {
         return [];
     }
 
+    /**
+     * @param $attribute
+     * @return mixed
+     */
     public function getLabel($attribute)
     {
         return $this->labels()[$attribute] ?? $attribute ;
@@ -95,7 +102,7 @@ abstract class Model
      * @param $rule
      * @param array $params
      */
-    private function addErrorForRule($attribute, $rule, $params= [])
+    private function addErrorForRule($attribute, $rule, array $params= [])
     {
         $message = $this->errorMessages()[$rule] ?? '';
         foreach($params as $key => $value){

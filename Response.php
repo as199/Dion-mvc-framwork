@@ -6,10 +6,15 @@ namespace atpro\phpmvc;
 /**
  * @Author Assane Dione
  * Class Response
+ * Permet de gerer la reponse
  * @package atpro\phpmvc
  */
 class Response
 {
+    /**
+     * Permet de modifier le status de la response
+     * @param int $code
+     */
     public function setStatusCode(int $code): void
     {
         http_response_code($code);

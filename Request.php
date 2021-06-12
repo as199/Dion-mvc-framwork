@@ -10,6 +10,10 @@ namespace atpro\phpmvc;
  */
 class Request
 {
+    /**
+     * Permet de retour les parametres passé dans l'url
+     * @return false|string
+     */
     public function getPath()
     {
         $path = $_SERVER['REQUEST_URI'] ?? '/';
@@ -20,22 +24,37 @@ class Request
        return substr($path, 0, $position);
     }
 
+    /**
+     * Permet de recuperer la method
+     * Exemple: post, get, etc...
+     */
     public function method()
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
+    /**
+     * Permet de verifier si la requete est de type "GET"
+     * @return bool
+     */
     public function isGet(): bool
     {
         return $this->method() === 'get';
     }
 
-
+    /**
+     * Permet de verifier si la requete est de type "POST"
+     * @return bool
+     */
     public function isPost(): bool
     {
         return $this->method() === 'post';
     }
 
+    /**
+     * Permet recuper le contenu du formulaire envoyer en GET ou POST
+     * @return array
+     */
     public function getBody(): array
     {
         $body = [];

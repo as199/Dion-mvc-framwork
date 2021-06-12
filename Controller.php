@@ -13,6 +13,9 @@ use atpro\phpmvc\middlewares\BaseMiddleware;
  */
 class Controller
 {
+    /**
+     * @var string
+     */
     public string $layout = 'main';
 
     public string $action = '';
@@ -23,6 +26,7 @@ class Controller
     protected array $middlewares =[];
 
     /**
+     * Recuper les middlewares
      * @return BaseMiddleware[]
      */
     public function getMiddlewares(): array
@@ -42,9 +46,9 @@ class Controller
      * Permet de rendre un vue avec des parametres possible
      * @param $view
      * @param array $params
-     * @return mixed
+     * @return array|false|string|string[]
      */
-    public  function render($view, $params= [])
+    public  function render($view, array $params= [])
     {
         return Application::$app->view->renderView($view, $params);
     }

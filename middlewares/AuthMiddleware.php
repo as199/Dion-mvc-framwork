@@ -7,6 +7,11 @@ namespace atpro\phpmvc\middlewares;
  use atpro\phpmvc\Application;
  use atpro\phpmvc\exceptions\ForbiddenException;
 
+ /**
+  * @Author Assane Dione
+  * Class AuthMiddleware
+  * @package atpro\phpmvc\middlewares
+  */
  class AuthMiddleware extends BaseMiddleware
 {
     public array $actions = [];
@@ -18,6 +23,9 @@ namespace atpro\phpmvc\middlewares;
          $this->actions = $actions;
      }
 
+     /**
+      * @throws ForbiddenException
+      */
      public function execute()
      {
          if(Application::isGuest()){

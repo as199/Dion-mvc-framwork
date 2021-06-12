@@ -28,7 +28,11 @@ class Application
     public ?UserModel $user = null;
     public View $view ;
 
-
+    /**
+     * Application constructor.
+     * @param $rootPath
+     * @param array $config
+     */
     public function __construct( $rootPath, array $config )
     {
         $this->userClass = $config['userClass'];
@@ -80,6 +84,10 @@ class Application
        }
     }
 
+    /**
+     * @param UserModel $user
+     * @return bool
+     */
     public function login(UserModel $user): bool
     {
         $this->user = $user;
@@ -90,13 +98,19 @@ class Application
 
     }
 
+    /**
+     * Permet de deconnecter l'utilisateur
+     */
     public function logout()
     {
         $this->user=null;
         $this->session->remove('user');
     }
 
-    public static function isGuest()
+    /**
+     * @return bool
+     */
+    public static function isGuest(): bool
     {
         return !self::$app->user;
     }
